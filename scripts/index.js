@@ -16,16 +16,42 @@ const rePluralPostfix = new RegExp(/_plural|_[\d]/g)
 const sheetId = [0]
 const SHEET_INFO = [
   {
-    name: 'vn',
-    id: 1771609779,
+    name: 'common',
+    id: 0,
+  },
+  {
+    name: 'header',
+    id: 904943653,
+  },
+  {
+    name: 'onboarding',
+    id: 1882922474,
+  },
+  {
+    name: 'dashboard',
+    id: 1184469703,
+  },
+  {
+    name: 'insight',
+    id: 2023175162,
+  },
+  {
+    name: 'blog',
+    id: 115079842,
+  },
+  {
+    name: 'body',
+    id: 512916140,
   },
 ]
 //번역이 필요없는 부분
 const NOT_AVAILABLE_CELL = 'N/A'
 //스프레드시트에 들어갈 header 설정
 const columnKeyToHeader = {
-  key: 'key',
-  vn: 'vn',
+  key: '키 key_{domain}__{UI}__{description}',
+  ko: '한글',
+  en: '영어',
+  ja: '일본어',
 }
 
 const loadSpreadsheet = async () => {
